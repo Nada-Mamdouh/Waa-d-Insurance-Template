@@ -1,0 +1,200 @@
+:root{
+    --purple: rgb(63, 0, 134);
+    --txtcolor: rgb(65, 65, 65);
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    color: var(--purple);
+    font-family: 'Cairo',sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+}
+.fa,.fa-solid{
+    padding: 5px;
+}
+.upper-nav,.mid-nav{
+    max-width: 80vw;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.upper-nav{
+    border-bottom: 2px solid var(--purple);
+    font-weight: 600;
+}
+.upper-nav ul:nth-child(2){
+    max-width: fit-content;
+}
+.mid-nav{
+    font-weight: 600;
+    min-height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style: none;
+    padding : 10px;
+    display: flex;
+    flex-basis: auto;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+}
+.mid-nav ul{
+    flex-shrink: 1;
+}
+
+.mid-nav ul:first-child img{
+    margin: 0 2px;
+    width: 17px;
+    height: 15px;
+}
+ul>li{
+    /* display: inline-block; */
+    padding : 5px;
+}
+.logo{
+    width: 60px;
+    height: 100%;
+    object-fit: fill;
+    padding-top : 15px;
+    padding-left: 10px;
+    /* background-image: url("images/logo.PNG");
+    background-repeat: no-repeat;
+    background-size: contain; */
+}
+.logo img {
+    height: 45px;
+}
+
+.lower-nav-img {
+    position: relative;
+    width: 100%;
+    min-height: 350px;
+    background: url("images/man-signing-paper.jpg") 60% 60% no-repeat;
+    background-size: cover;
+    opacity: .5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.lower-nav-img:after {
+    content: "";
+    background-color: grey;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: .2;
+    z-index: 10;
+    width: 100%;
+    height: 350px;
+    background: url("images/network.jpg");
+    background-size: cover;
+}
+.lower-nav-img p:first-child,.lower-nav-img p:nth-of-type(2){
+    position : absolute;
+    top: 50%;
+    left: 35%;
+    margin: 5px auto;
+    z-index: 15;
+    font-weight: 700;
+    font-size: 30px;
+    opacity: 1 !important;
+}
+.lower-nav-img p:nth-of-type(2){
+    top: 65%;
+    left: 44%;
+    margin: 5px auto;
+    font-size: 15px;
+}
+.tiny-logo img{
+    width:40px;
+    height:40px;
+    position: absolute;
+    margin:-20px 0px 0 95%;
+    border-radius: 50%;
+    text-shadow: 5px 5px rgb(44, 44, 44);
+    box-shadow:  1px 4px 3px #ccc;
+}
+.who-we-are-section{
+    width: 80%;
+    margin: 0px auto;
+    height: 500px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(5,1fr);
+}
+.cell{
+    display: flex;
+    padding-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    color:var(--txtcolor);
+}
+.cell p:nth-of-type(2){
+    font-size: 10px;
+}
+.section-title{
+    grid-row: 1/2;
+    grid-column: 3/4;
+    font-weight: 700;
+}
+.section-title p{
+    font-size: 20px !important;
+    text-align: center;
+}
+.ceo{
+    grid-row: 2/4;
+    grid-column: 3/4;
+    font-weight: 600;
+    font-size: large;
+}
+.ceo p:nth-of-type(2){
+    width: 90px;
+    margin-left: 7px;
+}
+
+.cofounder{
+    grid-row: 4/6;
+    grid-column: 4/5;
+    font-weight: 600;
+    font-size: large;
+}
+.cofounder p:nth-of-type(2){
+    width: 90px;
+    margin-left: 7px;
+}
+.member{
+    grid-row: 4/6;
+    grid-column: 2/3;
+    font-weight: 600;
+    font-size: large;
+}
+.member p:nth-of-type(2){
+    width: 90px;
+    margin-left: 7px;
+}
+@media only screen and (min-width: 200px) and (max-width: 767px)  {
+    .mid-nav{
+        flex-direction: column;
+    }
+    .lower-nav-img{
+        width: 100vw;
+    }
+    .lower-nav-img p:first-child,.lower-nav-img p:nth-of-type(2){
+        left: 30%;
+    }
+    .lower-nav-img p:nth-of-type(2){
+        left: 50%;
+    }
+  }
+
+
+
